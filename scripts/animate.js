@@ -1,0 +1,1 @@
+ScrollReveal().reveal('.wiget', { interval: 300 });

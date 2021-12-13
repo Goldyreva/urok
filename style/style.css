@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+main{
+    min-height: 100%;
+}
+header, header div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+header div{
+    width: 25vw;
+}
+button{
+    color: white;
+    background-color: #be9e75;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border: 3px solid #be9e75;
+}
+button:hover{
+    background-color: white;
+    color: #be9e75;
+    box-shadow: 0px 0px 5px 0px #00000054;
+}
+button:active{
+    box-shadow: 0px 0px 7px 0px #00000088 inset;
+    background-color: white;
+    color: #be9e75;
+}
+h1{
+    font-family: 'Merriweather', serif;
+    margin-bottom: 2vw;
+    font-size: 2rem;
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3vw;
+    font-family: 'Fira Sans', sans-serif;
+}
+h3{
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1vw;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+h4{
+    font-family: 'Merriweather', serif;
+    /* margin-bottom: 2vw; */
+    font-size: 1.6vw;
+}
+h5{
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+}
+.logo{
+    width: 3vw;
+    transition: all 0.2s linear;
+}
+.logo:hover{
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Fira Sans', sans-serif;
+}
+a:hover{
+    color: #ac8859;
+    transition: all 0.2s linear;
+}
+p{
+    font-family: 'Fira Sans', sans-serif;  
+}
+/* Баннер */
+.banner{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.banner p{
+    font-size: 1.5rem;
+    margin-bottom: 2vw;
+}
+.banner div:nth-child(1){
+    width: 49vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw 0 10vw;
+}
+.banner div:nth-child(2){
+    height: 45vw;
+    width: 50vw;
+    background: url(../images/molot2black.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right, top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+.banner div:nth-child(2) img{
+    margin: 0 17vw 0 5vw;
+    height: 80%;
+    box-shadow: 0px 0px 20px 0px #000000;
+}
+
+/* Преимущества компании */
+.advantage{
+    background-color: #181818;
+    color: rgb(226, 226, 226);
+    padding: 2% 0;
+}
+.advantage i{
+    font-size: 7vw;
+    color:  #be9e75;
+    margin-bottom: 2vw;
+}
+.advantage-cont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70vw;
+    margin: 0 auto;
+}
+.advantage-cont div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 20vw;
+}
+.advantage-cont p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+/* Показатели успеха */
+.success{
+    display: flex;
+    justify-content: space-between;
+}
+.success p{
+    font-size: 1.4vw;
+
+}
+.success h2{
+    text-align: left;
+}
+.success .div-cont:nth-child(1){
+    background: url(../images/handsblack.jpg);
+    height: 40vw;
+    width: 40vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left, top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.success .div-cont:nth-child(2){
+    width: 55vw;
+    height: 33vw;
+    padding: 5% 5vw 2% 5vw;
+
+}
+.success .div-cont:nth-child(1) img{
+    margin: 0 auto 0 13vw ;
+    width: 30vw;
+}
+.success .div-cont div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5vw 0 2.7vw;
+}
+.success .div-cont div div:nth-child(odd){
+    background-image: url(../images/circleleft.png);
+    background-position: left, center;
+}
+.success .div-cont div div:nth-child(even){
+    background-image: url(../images/circleright.png);
+    background-position: right, center;
+    text-align: right;
+}
+.success .div-cont{
+    background: none;
+}
+/* Услуги */
+.services{
+    background: #181818;
+    color: rgb(226, 226, 226);
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slider{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-fon{
+    width: 20vw;
+    height: 20vw;
+    box-shadow: 0px 0px 15px 0px #00000098;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.slider .service-fon:nth-child(1){
+    background-image: url(../images/house.jpg);
+}
+.slider .service-fon:nth-child(2){
+    background-image: url(../images/family.jpg);
+}
+.slider .service-fon:nth-child(3){
+    background-image: url(../images/store.jpg);
+}
+.service-fon div{
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front div{
+    background-color: rgba(0, 0, 0, 0.657);
+}
+.service-fon div p{
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 10px;
+}
+.services button{
+    margin: 2vw auto 0;
+}
+/* Подвал */
+.footer-hight{
+    height: 12vw;
+}
+footer{
+    height: 12vw;
+    margin-top: -12vw;
+}
+footer div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+footer ul{
+    list-style-type: none;
+    
+}
+footer div div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 15vw;
+}
+footer p{
+    font-size: 1.2rem;
+}
+footer img, footer ul{
+    width: 4vw;
+}
+
+/* Страница аккаунта */
+
+.main-account{
+    height: 100%;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw 3vw;
+}
+.personal-application h4{
+    font-size: 1.3rem;
+}
+.personal-application h3{
+    text-align: left;
+}
+.personal{
+    padding: 0 2vw;
+}
+.personal button{
+    width: 100%;
+}
+.personal ul{
+    list-style-type: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 2vw 0;
+}
+.personal-application{
+    /* background-color: rgb(0, 0, 0); */
+    margin: 0;
+    min-width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+.personal-application p{
+    margin: 1vw 0;
+    font-size: 1.5rem;
+}
+.personal-application h2{
+    text-align: left;
+    margin-bottom: 2vw;
+    color: #ffffff;
+}
+.personal-img{
+    width: 23vw;
+}
+.personal-application .delete{
+    text-align: right;
+    width: 100%;
+    display: inline-block;
+}
+.image-app img{
+    height: 15vw;
+    margin-right: 2vw;
+} 
+.app{
+    margin: 0 0 5% 0;
+    background-color: #ffffff;
+    padding: 2vw;
+}
+/* Панель администратора */
+.main-admin h2{
+    color: white;
+    text-align: left;
+    margin-bottom: 1vw;
+}
+.main-admin{
+    height: 100%;
+    background-color: #181818;
+
+    padding: 2vw 3vw;
+}
+.personal-application a{
+    font-size: 1.3rem;
+    margin-left: 1vw;
+    font-weight: 100;
+}
+
+/* поп-ап окна */
+
+.pop-up, .pop-up-send, .pop-up-status, .pop-up-delete, .pop-up-service{
+    width: 50vw; 
+    padding: 2vw;
+    border-radius: 4px;
+    background: #ffffff;
+    position: fixed;
+    top: 3%; left: 25vw;
+    /* margin: 3vw auto; */
+    display: none;
+    opacity: 0;
+    z-index: 38;
+    text-align: center;
+    max-height: 40vw;
+overflow-Y: auto;
+}
+.pop-up-status header{
+    display: flex;
+    justify-content: space-between;
+}
+.pop-up-status form{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+}
+.pop-up-status button, .pop-up-delete button{
+    font-size: 2rem;
+}
+.pop-up-send p{
+    font-size: 1.5rem;
+}
+.pop-up-send p a{
+    text-decoration: underline;
+}
+.pop-up-send h2{
+    margin: 0 auto;
+    font-size: 2rem;
+}
+header h2{
+    font-size: 1.8rem;
+}
+form span{
+    color: rgb(202, 0, 0);
+    text-align: right;
+    font-size: 1.3rem;
+}
+.close{
+    font-size: 40px;
+    color: #be9e75;
+    cursor: pointer;
+    display: block;
+    transition: 0.2s linear;
+}
+.close:hover{
+    color: #a8875b;
+}
+.overlay{
+    z-index: 37;
+    position: fixed;
+    background: rgba(0,0,0,.7);
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    cursor: pointer;
+    display: none;
+}
+.pop-up-send header, .pop-up-service header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+}
+.pop-up-service ul{
+    list-style-type: none;
+    font-size: 1.7rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+.pop-up-service li{
+    margin: 1%;
+}
+/* табы */
+.tabs__content {
+    display: none; 
+  }
+.tabs__content.active {
+    display: block; 
+}
+.active:not(div){
+    background-color: white;
+    color: #be9e75;
+    box-shadow: 0px 0px 5px 0px #00000054;
+}
+.tab-cont {
+    display: flex;
+    justify-content: space-around;
+}
+.tab-cont button{
+    width: 40%;
+}
+
+
+/* формы */
+.tabs__content form, .send-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1vw;
+}
+.tabs__content form div{
+    align-self: flex-start;
+    margin: 1vw 0;
+}
+.tabs__content label, .send-form label{
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 0.2vw 0;
+}
+.tabs__content input, .send-form input{
+    border: none;
+    border-bottom: 2px solid #be9e75a9;
+    font-size: 1.5rem;
+    outline: none;
+    background-color: white;
+    padding: 5px;
+    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 0.5vw;
+}
+.tabs__content button, .send-form button{
+    width: 50%;
+    margin: 0 auto;
+}
+.tabs__content input:hover, .tabs__content input:focus{
+    border-bottom: 2px solid #be9e75;
+}
+.tabs__content .form-auth{
+    margin-top: 5%;
+}
+.tabs__content .form-auth input {
+    margin: 0.5vw 0;
+}
+.tabs__content .form-auth button{
+    margin: 1vw auto;
+}
+select, option{
+    font-size: 1.5rem;
+    border: 2px solid #be9e75a9;
+    padding: 0.2vw;
+    outline: none;
+    margin: 1vw 0;
+}
+input[type="file"]{
+    border: none;
+    cursor: pointer;
+    margin: 0.4vw 0 2vw 0;
+}
+textarea{
+    outline: none;
+    border: 2px solid #be9e75a9;
+    font-size: 1.5rem;
+    resize: none;
+    padding: 0.2vw;
+}
+
+input[type=file]{
+    border: none;
+}
+input[type=file]:hover{
+    border: none;
+}
+/* Страница редактирования */
+.edit{
+    width: 80%;
+    margin: 2% auto;
+}
+/* стили формы изменения статуса заявки */
+.update-main{
+    margin: auto;
+    width: 40%;
+}
+.update-main h4{
+    margin-top: 10%;
+}
+.update-main form{
+    display: flex;
+    flex-direction: column;
+}
+.update-main form button{
+    font-size: 1.7rem;
+}
+/* класс для анимации появления при скролле */
+html.sr .wiget{
+    visibility: hidden;
+}
+@media (max-width:1200px){
+    .banner p, .advantage p{
+        font-size: 1.3rem;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+    h4{
+
+        font-size: 1.6vw;
+    }
+    h5{
+        font-size: 1.2rem;
+    }
+    button{
+        font-size: 1.5rem;
+    }
+    a{
+        font-size: 1.3rem;
+    }
+    .service-fon div p{
+        font-size: 1.8vw;
+    }
+}
+@media (max-width:720px){
+    header div{
+        width: 40vw;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+    .banner div:nth-child(2){
+        width: 100vw;
+        height: 80vw;
+        margin: 0;
+    }
+    .banner div:nth-child(2) img{
+        width: 50vw;
+    }
+    .banner div:nth-child(1){
+        width: 90vw;
+        padding: 5vw;
+    }
+    .banner div:nth-child(1) p,.banner div:nth-child(1) h1{
+        text-align: center;
+    }
+    .advantage-cont{
+        flex-direction: column;
+        margin: 0;
+    }
+    .advantage-cont div{
+        width: 90vw;
+        margin: 3vw 5vw;
+    }
+    .advantage i{
+        font-size: 15vw;
+    }
+    .success{
+        flex-direction: column;
+    }
+    .success .div-cont:nth-child(1){
+        width: 100vw;
+        height: 80vw;
+        margin: 0;
+    }
+    .success .div-cont:nth-child(1) img{
+        width: 60vw;
+        margin: 0 0 0 30vw;
+    }
+    .success .div-cont:nth-child(2){
+        width: 90vw;
+        height: auto;
+        padding: 2vw 5vw;
+    }
+    .success .div-cont div{
+        height: 60vw;
+        padding:  0 8vw 0 6vw;
+    }
+    h4{
+        font-size: 4vw;
+    }
+    .success p{
+        font-size: 3vw;
+    }
+    .success h2{
+        text-align: center;
+    }
+    .slider{
+        flex-direction: column;
+    }
+    .service-fon div p{
+        font-size: 4vw;
+    }
+    .service-fon{
+        width: 70vw;
+        height: 70vw;
+        margin: 2vw 0;
+    }
+    footer div:nth-child(2){
+        flex-wrap: wrap;
+    }
+    footer div:nth-child(1){
+         padding: 0 6vw 0 0;
+    }
+    footer div div{
+        width: 40vw;
+    }
+    footer div{
+        justify-content: space-evenly;
+       
+    }
+    .logo{
+        width: 10vw;
+    }
+
+    .tab-cont {
+        flex-direction: column-reverse;
+    }
+    .tab-cont button{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .tabs__content button{
+        width: 90%;
+    }
+    .close{
+        font-size: 50px;
+        display: inline-block;
+        text-align: right;
+    }
+    .pop-up{
+        margin: 2vw auto;
+    }
+    .pop-up, .pop-up-send{
+        width: 80vw; 
+    }
+    .pop-up-send header{
+        align-items: flex-end;
+        flex-direction: column-reverse;
+    }
+    .pop-up-send{
+        margin: 15vw auto;
+    }
+
+    .main-account{
+        flex-direction: column;
+    }
+    .personal{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3vw;
+    }
+    .image-app img{
+        height: 35vw;
+    }
+    .pop-up, .pop-up-send, .pop-up-status, .pop-up-delete, .pop-up-service{
+        max-height: 2000px;
+        /* min-height: 120vw; */
+    top: 3%; left: 10vw;
+
+    }
+    .personal{
+        justify-content: space-between;
+        align-items: center;
+    }
+}
