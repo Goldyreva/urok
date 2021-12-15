@@ -561,10 +561,65 @@ input[type=file]:hover{
 .update-main form button{
     font-size: 1.7rem;
 }
+.update-a{
+    font-size: 1.4rem !important;
+    font-weight: 100;
+    display: inline-block;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.update-a:hover{
+    color: #ac8859;
+    transition: all 0.2s linear;
+}
+.update-form{
+    display: none;
+}
+.update-form-show{
+    /* animation: showBlock 0.5s linear forwards; */
+    display: block;
+}
 /* класс для анимации появления при скролле */
 html.sr .wiget{
     visibility: hidden;
 }
+
+/* Страницы отзывов */
+
+.feedback-main{
+    padding: 0 10vw;
+}
+.feedback-main h3{
+    text-align: start;
+    margin-top: 2vw;
+}
+.feedback-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.feedback-form textarea{
+    width: 100%;
+    margin-bottom: 1vw;
+}
+
+.feedback-item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2vw 0;
+}
+.feedback-item img{
+    width: 10vw;
+    margin-right: 3vw;
+}
+
+
+
+
+
+
+
 @media (max-width:1200px){
     .banner p, .advantage p{
         font-size: 1.3rem;
@@ -733,5 +788,18 @@ html.sr .wiget{
     .personal{
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+
+
+
+
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
 }

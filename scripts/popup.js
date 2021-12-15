@@ -34,41 +34,25 @@ $(document).ready(function() {
     });
   });
 
-  $(document).ready(function() {
-    $('a.status-a').click( function(event){
-      event.preventDefault();
-      $('#overlay').fadeIn(297,	function(){
-        $('#pop-up-status') 
-        .css('display', 'block')
-        .animate({opacity: 1}, 198);
-      });
-    });
-  
-    $('#close, #overlay').click( function(){
-      $('#pop-up-status').animate({opacity: 0}, 198, function(){
-        $(this).css('display', 'none');
-        $('#overlay').fadeOut(297);
-      });
-    });
-  });
+ 
 
-  $(document).ready(function() {
-    $('a.delete').click( function(event){
-      event.preventDefault();
-      $('#overlay').fadeIn(297,	function(){
-        $('#pop-up-delete') 
-        .css('display', 'block')
-        .animate({opacity: 1}, 198);
-      });
-    });
+  // $(document).ready(function() {
+  //   $('a.delete').click( function(event){
+  //     event.preventDefault();
+  //     $('#overlay').fadeIn(297,	function(){
+  //       $('#pop-up-delete') 
+  //       .css('display', 'block')
+  //       .animate({opacity: 1}, 198);
+  //     });
+  //   });
   
-    $('#close, #overlay').click( function(){
-      $('#pop-up-delete').animate({opacity: 0}, 198, function(){
-        $(this).css('display', 'none');
-        $('#overlay').fadeOut(297);
-      });
-    });
-  });
+  //   $('#close, #overlay').click( function(){
+  //     $('#pop-up-delete').animate({opacity: 0}, 198, function(){
+  //       $(this).css('display', 'none');
+  //       $('#overlay').fadeOut(297);
+  //     });
+  //   });
+  // });
   $(document).ready(function() {
     $('button.service-btn').click( function(event){
       event.preventDefault();

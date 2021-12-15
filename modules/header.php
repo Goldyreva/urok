@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="/images/logo.png" alt="logo" class="logo"></a>
+        <a href="/index.php"><img src="/images/logo.png" alt="logo" class="logo"></a>
         <div>
             <a href="#advantage">Услуги</a>
             <a href="#advantage">Контакты</a>
@@ -24,13 +24,13 @@
         <?php
             }elseif($_COOKIE['admin'] != ""){
         ?>
-            <a href="pages/adminpanel.php">Панель администратора</a>
-            <a href="php/exit.php">Выход</a>
+            <a href="/pages/adminpanel.php">Панель администратора</a>
+            <a href="/php/exit.php">Выход</a>
         <?php
             }else{
         ?>
-        <a href="pages/account.php">Личный кабинет</a>
-        <a href="php/exit.php">Выход</a>
+        <a href="/pages/account.php">Личный кабинет</a>
+        <a href="/php/exit.php">Выход</a>
 
         <?php
             }

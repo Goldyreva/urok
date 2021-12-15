@@ -31,7 +31,7 @@
                     <option value="Недвижимость и строительство">Недвижимость и строительство</option>
                 </select>
                 <label for="foto">Фото</label>
-                <input type="file" name="foto">
+                <input multiple type="file" name="foto[]">
                 <button type="submit">Отправить</button>
             </form>
         </div>

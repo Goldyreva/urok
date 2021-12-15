@@ -3,6 +3,7 @@
 include 'database.php';
 
 $id = $_GET['id'];
+$induction->query("DELETE FROM `app_images` WHERE `app_id` = '$id'");
 $induction->query("DELETE FROM `app` WHERE `id` = '$id'");
 
 if($_COOKIE['user'] == ""){

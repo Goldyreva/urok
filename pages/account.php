@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="../index.html"><img src="../images/logo.png" alt="logo" class="logo"></a>
+        <a href="/index.php"><img src="../images/logo.png" alt="logo" class="logo"></a>
         <div>
             <a href="../index.php"> Главная</a>
             <a href="../php/exit.php">Выйти</a>
@@ -52,13 +52,13 @@
                 <?php 
                 include "../php/database.php";
                
-                $result = $induction->query("SELECT * FROM `app` WHERE `login` = '$login'");
+                $result = $induction->query("SELECT * FROM `app` WHERE `user_login` = '$login'");
                 $app = mysqli_fetch_all($result);
                
                 foreach($app as $app){
                 ?>
                 <div class="app">
-                    <h3><?=$app[5];?></h3>
+                    <h3><?=$app[3];?></h3>
                     <h4>Статус:
                     <?=$app[6];?>
                     </h4>
@@ -66,11 +66,11 @@
                     <?=$app[1];?>
                     </p>
                     <?php
-                    if(!(empty($app[3]))){
+                    if(!(empty($app[5]))){
                     ?>
                     <div class="image-app">
                         <img src="
-                        <?=$app[3];?>
+                        <?=$app[5];?>
                         " alt="image-app">
                     </div>
                     <?php

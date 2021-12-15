@@ -9,7 +9,12 @@
     $patronymic = trim($_POST['patronymic']);
     $password = trim($_POST['password']);
     $repeatpassword = trim($_POST['repeat-password']);
-
+    // echo $login;
+    // echo $nowlogin;
+    // $result = $induction->query("SELECT * FROM `users` WHERE `login` = '$nowlogin'");
+    // $result = $result->fetch_assoc();
+    // print_r($result);
+    // exit();
     if(!empty($_FILES['foto']['name'])){
         if(move_uploaded_file($_FILES['foto']['tmp_name'],
         '../temp/user-temp/'.$_FILES['foto']['name'])){
@@ -27,11 +32,11 @@
         $induction->close();
     }
     if(!empty($login)){
-        setcookie('user', $user['login'], time() - 3600, "/");
+        // setcookie('user', $user['login'], time() - 3600, "/");
         $induction->query("UPDATE `users` SET `login` = '$login' WHERE `login` = '$nowlogin'");
-        // $induction->close();
-        setcookie('user', $login, time() + 3600, "/");
-        $induction->query("UPDATE `app` SET `login` = '$login' WHERE `login` = '$nowlogin'");
+        $induction->close();
+        // setcookie('user', $login, time() + 3600, "/");
+        // $induction->query("UPDATE `app` SET `login` = '$login' WHERE `user_login` = '$nowlogin'");
 
     }
     if(!empty($email)){

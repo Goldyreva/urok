@@ -1,5 +1,10 @@
 <?php
     include 'modules/header.php';
+    include 'php/database.php';
+    // $result1 = $induction->query("SELECT * FROM `users`");
+    // $user1 = $result1->fetch_assoc();
+    // print_r($user1);
+    // exit();
 ?>
     <main>
         <section class="banner">

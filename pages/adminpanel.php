@@ -35,13 +35,22 @@
             <div class="personal-application">
                 <div class="app">
                     <h3>
-                        <?=$app[5];?>
+                        <?=$app[3];?>
                     </h3>
                     <h4>Статус:
                         <?=$app[6];?>
 
-                        <a href="../php/update.php?id=<?=$app[0];?>"> Изменить статус</a>
+                        <p class="update-a"> Изменить статус</p>
+                        
                     </h4>
+                    <form action="../php/update-check.php" method="post" class="update-form">
+                       <input type="hidden" name="id" value="<?=$app[0]?>">
+                       <select name="status" id="">
+                       <option value="в обработке">в обработке</option>
+                       <option value="принято">принято</option>
+                       <option value="отказанно">отказанно</option>
+                       </select>
+                       <button type="submit">Сохранить</button></form>
                     <h4>
                     Категория:
                     <?=$app[2];?>
@@ -56,22 +65,31 @@
                         <?=$app[1];?>
                     </p>
                     <?php
-                    if(!(empty($app[3]))){
+                   
+                    $images = $induction->query("SELECT * FROM `app_images` WHERE `app_id` = '$app[0]'");
+                    $images =  mysqli_fetch_all($images);
+                    
+                   
                     ?>
                     <div class="image-app">
-                        <img src="
-                        <?=$app[3];?>
+                    <?php    
+                        foreach($images as $img){
+                    ?>
+                    <img src="
+                        <?=$img[1];?>
                         " alt="image-app">
-                    </div>
                     <?php
                     }
                     ?>
+                    </div>
+                    
                     <a href="../php/delete.php?id=<?=$app[0];?>" class="delete">Удалить заявку</a>
                 </div>
             </div>
             <?php
+            // include 'pop-up-delete.php';
                     }
-                    include 'pop-up-delete.php';
+                    
                 ?>
 
         </section>
@@ -103,7 +121,7 @@
             </div>
         </div>
     </footer>
-    <div class="pop-up-status" id="pop-up-status">
+    <!-- <div class="pop-up-status" id="pop-up-status">
         <header>
             <span></span>
             <span id="close" class="close"><i class="fas fa-times-circle"></i></span>
@@ -118,7 +136,7 @@
 
             <button type="submit">Изменить</button>
         </form>
-    </div>
+    </div> -->
     <?php
         include 'pop-up-send.php';
         
@@ -129,6 +147,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <script src="../scripts/popup.js"></script>
+    <script src="../scripts/update.js"></script>
 
 </body>
 
